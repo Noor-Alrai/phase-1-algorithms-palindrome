@@ -1,5 +1,17 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let lastLetter;
+  let firstLetter;
+
+  for (let i = 0; i < word.length; i++) {
+    firstLetter = word[i];
+    lastLetter = word[word.length - 1];
+    if (firstLetter == lastLetter) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 /* 
@@ -23,3 +35,4 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+isPalindrome("abba");
